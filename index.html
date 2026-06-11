@@ -88,6 +88,17 @@ tbody tr:hover td{background:rgba(31,220,122,.05)}
 .pill{display:inline-block;padding:3px 10px;border-radius:20px;font-family:'Spline Sans Mono',monospace;font-size:.74rem;font-weight:500}
 .pill.pos{background:rgba(240,180,41,.15);color:var(--gold)}
 .pill.ctr{background:rgba(255,107,90,.14);color:var(--coral)}
+.pill.yes{background:rgba(31,220,122,.16);color:var(--leaf)}
+.pill.no{background:rgba(255,107,90,.14);color:var(--coral)}
+.pill.muted{background:rgba(244,241,232,.08);color:var(--mist)}
+.imp-pos{color:var(--leaf);font-family:'Fraunces',serif;font-weight:600}
+.imp-neg{color:var(--coral);font-family:'Fraunces',serif;font-weight:600}
+.aiobox{background:rgba(31,220,122,.05);border:1px solid var(--line);border-radius:14px;padding:18px}
+.aiobox .qq{font-family:'Spline Sans Mono',monospace;font-size:.78rem;color:var(--moss);letter-spacing:.06em;margin-bottom:8px}
+.aiobox .tx{font-size:.95rem;line-height:1.55;color:var(--paper)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.chip{font-family:'Spline Sans Mono',monospace;font-size:.7rem;padding:4px 9px;border-radius:20px;background:rgba(244,241,232,.06);color:var(--mist);border:1px solid var(--line)}
+.chip.vb{background:rgba(31,220,122,.16);color:var(--leaf);border-color:rgba(31,220,122,.3)}
 .uplift{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--leaf);font-weight:600}
 .uplift small{font-size:.7rem;color:var(--mist);font-family:'Spline Sans Mono',monospace;display:block;font-weight:400}
 .bar-cell{position:relative}
@@ -251,10 +262,45 @@ footer{padding:60px 0;border-top:1px solid var(--line);color:var(--mist);font-si
   </div>
 </section>
 
+<section id="aio">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="idx">07 — GOOGLE KI-OVERVIEWS</span><h2>Der <em>KI-Filter</em> vor dem Klick.</h2></div>
+      <p class="note">Live von Google (DE) gescrapt via DataForSEO: 10 typische „Ist X vegan/gesund?"-Suchen. Wir prüfen, ob Google eine KI-Übersicht (AI Overview) zeigt, wer darin als Quelle zitiert wird — und was das VeganBlatt an Klicks kostet oder bringt.</p>
+    </div>
+
+    <div class="card band reveal" style="padding:34px;margin-bottom:22px">
+      <div class="bigstat">
+        <div><div class="n" data-count="9">0</div><div class="l">von 10 Suchen zeigen eine KI-Übersicht — dieser Themenraum ist KI-dominiert</div></div>
+        <div><div class="n" data-count="6">0</div><div class="l">davon zitieren VeganBlatt als Quelle — die #1-Domain im Test</div></div>
+        <div><div class="n" id="aioImpact" style="color:var(--coral)">0</div><div class="l">geschätzte Netto-Klicks / Monat durch KI-Übersichten (Annahme-Modell)</div></div>
+      </div>
+      <p style="color:var(--mist);font-size:.95rem;line-height:1.6;max-width:78ch">Das Muster ist eindeutig: <b style="color:var(--leaf)">Wird VeganBlatt in der KI-Übersicht zitiert, ist der Effekt positiv</b> (der Quellen-Chip fängt Klicks ab). <b style="color:var(--coral)">Fehlt VeganBlatt</b> (honig, agavendicksaft, tofu), frisst die KI-Übersicht die Klicks — trotz guter organischer Position. Zitiert-werden ist das neue Ranking.</p>
+    </div>
+
+    <div class="card reveal" style="padding:10px 16px;margin-bottom:22px"><table id="aioTable"><thead><tr>
+      <th>Suchbegriff</th><th class="r">KI-Übersicht</th><th class="r">VeganBlatt zitiert?</th><th class="r">Org. Pos.</th><th class="r">Quellen</th><th class="r">Impact/Mon</th>
+    </tr></thead><tbody></tbody></table></div>
+
+    <div class="season-grid">
+      <div class="card reveal">
+        <h3 style="font-size:1.4rem;margin-bottom:6px">Wem Google in diesen KI-Übersichten vertraut</h3>
+        <p style="color:var(--mist);font-size:.9rem;margin-bottom:18px">Häufigkeit als zitierte Quelle. <b style="color:var(--leaf)">VeganBlatt führt</b> — vor PETA und Öko-Test. Diese Autorität gilt es zu verteidigen.</p>
+        <div class="chart-wrap" style="height:320px"><canvas id="domChart"></canvas></div>
+      </div>
+      <div class="card reveal">
+        <h3 style="font-size:1.4rem;margin-bottom:6px">Was in der KI-Übersicht steht</h3>
+        <p style="color:var(--mist);font-size:.9rem;margin-bottom:14px">Beispiel — Googles KI-Antwort auf eine Suche, inkl. der zitierten Quellen:</p>
+        <div id="aioExample"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="strategy">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><span class="idx">07 — STRATEGIE</span><h2>Vier Hebel für das <em>nächste</em> Quartal.</h2></div>
+      <div><span class="idx">08 — STRATEGIE</span><h2>Vier Hebel für das <em>nächste</em> Quartal.</h2></div>
       <p class="note">Aus den Daten destilliert — was die Redaktion konkret tun sollte, in Klartext.</p>
     </div>
     <div class="strat reveal">
@@ -262,6 +308,7 @@ footer{padding:60px 0;border-top:1px solid var(--line);color:var(--mist);font-si
       <div class="scard" data-n="B"><h3>E-Nummern-Serie ausbauen</h3><p>e920, e120, e631 ranken bereits auf Seite 1, konvertieren aber kaum. Wenige, hochspezialisierte Seiten mit großer Nachfrage — Snippets & Tabellen optimieren, untereinander verlinken.</p><div class="do">→ Snippet-Optimierung für 5 E-Nummern-Seiten</div></div>
       <div class="scard" data-n="C"><h3>Produkt-Checks verdoppeln</h3><p>Produkte & Marken sind mit 5.421 Klicks das stärkste Thema. „skittles", „oreo", „haribo", „red bull" — die Redaktion sollte das erfolgreichste Format systematisch auf weitere bekannte Marken ausrollen.</p><div class="do">→ Redaktioneller Kalender: 2 Produkt-Checks / Woche</div></div>
       <div class="scard" data-n="D"><h3>Titel & Snippets reparieren</h3><p>Die Top-Chance liegt nicht in neuen Inhalten, sondern in CTR. Begriffe auf Position 5–7 mit unter 1 % CTR haben ein Titel-Problem. Title-Tags und Meta-Descriptions der Striking-Distance-Liste überarbeiten.</p><div class="do">→ 18 Title-Tags diese Woche umschreiben</div></div>
+      <div class="scard" data-n="E" style="grid-column:1/-1;border-color:rgba(31,220,122,.3)"><h3>In KI-Übersichten zitiert werden</h3><p>9 von 10 informellen Vegan-Suchen zeigen eine KI-Übersicht — wer nicht zitiert wird, verliert Klicks trotz Top-Ranking. VeganBlatt ist schon die meistzitierte Quelle, fehlt aber bei „ist honig vegan", „ist agavendicksaft gesund" und „ist tofu gesund". Klare, vorangestellte Definitionssätze, FAQ-Markup und prägnante Ja/Nein-Antworten erhöhen die Zitier-Chance.</p><div class="do">→ 3 fehlende Seiten KI-übersichts-optimieren (klare Antwort im 1. Absatz + FAQ-Schema)</div></div>
     </div>
   </div>
 </section>
@@ -383,6 +430,43 @@ async function boot(){
   // season themes
   document.getElementById('seasonThemes').innerHTML = S.seasonal_themes.map(t=>`
     <div class="stheme"><div class="ev">❧ ${t.event}</div><div class="nt">${t.note}</div></div>`).join('');
+
+  // ---- AI OVERVIEWS ----
+  const A = await fetch('aio.json').then(r=>r.json());
+  document.getElementById('aioImpact').dataset.count = A.summary.total_monthly_impact;
+  const ab = document.querySelector('#aioTable tbody');
+  ab.innerHTML = A.results.map(r=>{
+    const aio = r.has_aio?'<span class="pill yes">JA</span>':'<span class="pill muted">nein</span>';
+    const cited = !r.has_aio?'<span class="pill muted">—</span>':(r.vb_cited?'<span class="pill yes">zitiert</span>':'<span class="pill no">fehlt</span>');
+    const pos = r.vb_organic_pos?`<span class="pill pos">${r.vb_organic_pos}</span>`:'<span class="pill muted">—</span>';
+    const imp = r.monthly_impact>0?`<span class="imp-pos">+${r.monthly_impact}</span>`:(r.monthly_impact<0?`<span class="imp-neg">${r.monthly_impact}</span>`:'<span class="mono" style="color:var(--mist)">0</span>');
+    return `<tr class="q"><td><span class="qname">${r.query}</span></td>
+      <td class="r">${aio}</td><td class="r">${cited}</td><td class="r">${pos}</td>
+      <td class="r mono">${r.ref_count||'—'}</td><td class="r">${imp}</td></tr>`;
+  }).join('');
+
+  // cited domains chart
+  const dom = A.top_cited_domains.slice(0,8);
+  new Chart(document.getElementById('domChart'),{
+    type:'bar',
+    data:{labels:dom.map(d=>d.domain.replace(/^www\./,'')),datasets:[{data:dom.map(d=>d.count),
+      backgroundColor:dom.map(d=>d.domain.includes('veganblatt')?'#1fdc7a':'rgba(90,125,84,.6)'),
+      borderColor:dom.map(d=>d.domain.includes('veganblatt')?'#1fdc7a':'#5a7d54'),borderWidth:1,borderRadius:5}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{backgroundColor:'#0a140d',titleFont:{family:'Spline Sans Mono'},callbacks:{label:c=>` ${c.parsed.x}× als Quelle zitiert`}}},
+      scales:{x:{grid:{color:'rgba(244,241,232,.06)'},ticks:{color:'#9fb0a4',font:{family:'Spline Sans Mono',size:10},stepSize:1},title:{display:true,text:'Zitierungen (10 Suchen)',color:'#5a7d54',font:{size:10}}},
+        y:{grid:{display:false},ticks:{color:'#c9d3cb',font:{family:'Spline Sans Mono',size:11}}}}}
+  });
+
+  // example AIO box (pick milchsäure if present, else first cited)
+  const ex = A.results.find(r=>r.query.includes('milchsäure')&&r.aio_text) || A.results.find(r=>r.has_aio&&r.aio_text);
+  if(ex){
+    document.getElementById('aioExample').innerHTML = `<div class="aiobox">
+      <div class="qq">↳ Suche: „${ex.query}"</div>
+      <div class="tx">${ex.aio_text}…</div>
+      <div class="chips">${ex.refs.map(x=>`<span class="chip ${x.domain.includes('veganblatt')?'vb':''}">${x.domain.replace(/^www\./,'')}</span>`).join('')}</div>
+    </div>`;
+  }
 
   // reveal + count observers
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');

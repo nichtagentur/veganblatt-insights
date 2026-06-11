@@ -1,0 +1,515 @@
+{
+  "source": "DataForSEO live Google SERP (location=Germany/2276, lang=de, desktop)",
+  "model_assumptions": {
+    "aio_suppression": 0.45,
+    "aio_cited_ctr": 0.025,
+    "note": "Impact = geschaetzte monatliche Klicks MIT AIO minus OHNE AIO, basierend auf VeganBlatt-Impressionen (GSC) x positionsabhaengiger CTR. Annahmen, keine Messung."
+  },
+  "summary": {
+    "queries": 10,
+    "with_aio": 9,
+    "vb_cited": 6,
+    "total_monthly_impact": -61
+  },
+  "top_cited_domains": [
+    {
+      "domain": "www.veganblatt.com",
+      "count": 5
+    },
+    {
+      "domain": "www.peta.de",
+      "count": 4
+    },
+    {
+      "domain": "www.oekotest.de",
+      "count": 3
+    },
+    {
+      "domain": "vegpool.de",
+      "count": 2
+    },
+    {
+      "domain": "www.amazon.de",
+      "count": 2
+    },
+    {
+      "domain": "www.youtube.com",
+      "count": 2
+    },
+    {
+      "domain": "schrotundkorn.de",
+      "count": 2
+    },
+    {
+      "domain": "www.rewe.de",
+      "count": 2
+    },
+    {
+      "domain": "www.valrhona.com",
+      "count": 1
+    },
+    {
+      "domain": "tcho.com",
+      "count": 1
+    },
+    {
+      "domain": "analytik.news",
+      "count": 1
+    },
+    {
+      "domain": "www.viactiv.de",
+      "count": 1
+    }
+  ],
+  "results": [
+    {
+      "query": "juice cleanse",
+      "imp": 7759,
+      "pos": 10.5,
+      "clicks": 1,
+      "monthly_impressions": 2586,
+      "has_aio": false,
+      "ref_count": 0,
+      "refs": [],
+      "vb_cited": false,
+      "vb_organic_pos": null,
+      "aio_text": "",
+      "clicks_no_aio": 47,
+      "clicks_with_aio": 47,
+      "monthly_impact": 0
+    },
+    {
+      "query": "ist kakaobutter vegan",
+      "imp": 3522,
+      "pos": 5.6,
+      "clicks": 0,
+      "monthly_impressions": 1174,
+      "has_aio": true,
+      "ref_count": 6,
+      "refs": [
+        {
+          "domain": "vegpool.de",
+          "title": "Kakaobutter - ist das vegan? - Vegpool",
+          "url": "https://vegpool.de/inhaltsstoffe/kakaobutter.html"
+        },
+        {
+          "domain": "www.valrhona.com",
+          "title": "Kakaobutter | Valrhona Schokolade",
+          "url": "https://www.valrhona.com/de/l-ecole-valrhona/entdecken-sie-die-ecole-valrhona/schokoladenglossar/kakaobutter"
+        },
+        {
+          "domain": "tcho.com",
+          "title": "Was ist Kakaobutter ? – TCHO Schokolade",
+          "url": "https://tcho.com/blogs/news/what-is-cocoa-butter"
+        },
+        {
+          "domain": "www.veganblatt.com",
+          "title": "Ist Kakao vegan? Kakaopulver, Nesquik und Kakaobutter im Check",
+          "url": "https://www.veganblatt.com/a/ist-kakao-vegan"
+        },
+        {
+          "domain": "analytik.news",
+          "title": "Ist vegane Schokolade wirklich \"vegan\"? - Analytik NEWS",
+          "url": "https://analytik.news/fachartikel/2025/45.html"
+        },
+        {
+          "domain": "www.viactiv.de",
+          "title": "Wie gesund ist Kakao?",
+          "url": "https://www.viactiv.de/gesundheitswissen/wie-gesund-ist-kakao"
+        }
+      ],
+      "vb_cited": true,
+      "vb_organic_pos": 9,
+      "aio_text": "Kakaobutter ist rein pflanzlich und damit immer vegan. Sie wird durch das Pressen von Kakaomasse gewonnen und enthält keinerlei Milchprodukte oder andere tierische Bestandteile. Der Begriff „Butter“ ist hier lediglich eine Bezeichnung für die Konsistenz des Fettes. Valrhona +1 Verwendung: Reine Kakaobutter ist für die vegane Ernährung bestens geeignet. Achtung bei Fertigprodukten: In Lebensmitteln wie weißer Schokolade oder manchen Nuss-Nougat-Cremes wird Kakaobutter häufig mit Milchpulver, Molke oder Butterreinfett gemischt. Hier ist der Blick auf die Zutatenliste notwendig. Genaue Auskünfte ",
+      "clicks_no_aio": 47,
+      "clicks_with_aio": 55,
+      "monthly_impact": 8
+    },
+    {
+      "query": "ist milchsäure vegan",
+      "imp": 4159,
+      "pos": 7.2,
+      "clicks": 1,
+      "monthly_impressions": 1386,
+      "has_aio": true,
+      "ref_count": 6,
+      "refs": [
+        {
+          "domain": "www.peta.de",
+          "title": "Ist Milchsäure vegan? Alle Infos zu Produkten mit Milchsäure - PETA",
+          "url": "https://www.peta.de/veganleben/milchsaeure-vegan/"
+        },
+        {
+          "domain": "www.resch-frisch.com",
+          "title": "Milchsäure - bei Laktoseintoleranz geeignet? - Resch&Frisch",
+          "url": "https://www.resch-frisch.com/blog/ernaehrung/milchsaeure-bei-laktoseintoleranz"
+        },
+        {
+          "domain": "veggie-einhorn.de",
+          "title": "Ist Milchsäure vegan? - Veggie Einhorn",
+          "url": "https://veggie-einhorn.de/milchsaeure-vegan/"
+        },
+        {
+          "domain": "www.veganblatt.com",
+          "title": "Ist Milchsäure vegan? Der vollständige Guide zu E270",
+          "url": "https://www.veganblatt.com/a/milchsaure"
+        },
+        {
+          "domain": "www.amazon.de",
+          "title": "Special Ingredients Vegan Milchsäure Pulver 100g Reine ... - Amazon.de",
+          "url": "https://www.amazon.de/Special-Ingredients-Milchs%C3%A4ure-Lebensmittelqualit%C3%A4t-Anleitungen/dp/B074ZHMJP7"
+        },
+        {
+          "domain": "www.primaveralife.com",
+          "title": "Ist Milchsäure vegan? Was ist das? - PRIMAVERA",
+          "url": "https://www.primaveralife.com/faq/roh-und-inhaltsstoffe/ist-milchsaeure-vegan-was-ist-das.html"
+        }
+      ],
+      "vb_cited": true,
+      "vb_organic_pos": 8,
+      "aio_text": "Milchsäure ist in den allermeisten Fällen vegan. Trotz ihres irreführenden Namens wird sie industriell fast immer biotechnologisch durch die Fermentation von pflanzlichem Zucker (z. B. aus Zuckerrüben oder Maisstärke) hergestellt und ist laktosefrei. PETA +2 Herstellung: Sie entsteht durch Milchsäurebakterien, die pflanzliche Kohlenhydrate vergären – ganz ohne tierische Bestandteile. Ausnahme: In sehr seltenen Fällen oder in traditionellen Milchprodukten kann Milchsäure aus tierischen Quellen stammen. Wenn ein Produkt jedoch als \"vegan\" gekennzeichnet ist oder Sie sich in einem veganen Sortime",
+      "clicks_no_aio": 42,
+      "clicks_with_aio": 58,
+      "monthly_impact": 16
+    },
+    {
+      "query": "ist red bull vegan",
+      "imp": 3790,
+      "pos": 6.3,
+      "clicks": 14,
+      "monthly_impressions": 1263,
+      "has_aio": true,
+      "ref_count": 5,
+      "refs": [
+        {
+          "domain": "www.redbull.com",
+          "title": "Ist Red Bull Energy Drink für Vegetarier:innen geeignet?",
+          "url": "https://www.redbull.com/de-de/energydrink/questions/ist-der-red-bull-energy-drink-fuer-vegetarier-innen-geeignet"
+        },
+        {
+          "domain": "www.eat-vegan.de",
+          "title": "Stierhoden oder Pflanzenkraft? Ist Red Bull wirklich vegan – der große ...",
+          "url": "https://www.eat-vegan.de/blog/stierhoden-oder-pflanzenkraft-ist-red-bull-wirklich-vegan-der-grosse-faktencheck"
+        },
+        {
+          "domain": "utopia.de",
+          "title": "Ist Red Bull eigentlich vegan? - Utopia.de",
+          "url": "https://utopia.de/ratgeber/ist-red-bull-eigentlich-vegan_628204/"
+        },
+        {
+          "domain": "www.veganblatt.com",
+          "title": "Ist Red Bull vegan? Energy Drinks, Taurin und mehr im Check",
+          "url": "https://www.veganblatt.com/a/ist-red-bull-vegan"
+        },
+        {
+          "domain": "plantbasednews.org",
+          "title": "Is Red Bull Vegan? The Debate Explained - Plant Based News",
+          "url": "https://plantbasednews.org/lifestyle/food/is-red-bull-vegan/"
+        }
+      ],
+      "vb_cited": true,
+      "vb_organic_pos": 8,
+      "aio_text": "Ja, Red Bull ist für Veganer geeignet. Alle Inhaltsstoffe wie Koffein, Vitamine und das oft diskutierte Taurin werden rein synthetisch hergestellt und stammen nicht von Tieren. Es werden auch keine tierischen Farbstoffe (wie Karmin) oder Gelatine verwendet. Red Bull +3 Dies gilt für das gesamte Kernsortiment, einschließlich: Red Bull +1 Red Bull Energy Drink Red Bull Sugarfree & Zero Red Bull Editions Red Bull Cola Warum manche Veganer die Marke dennoch meiden:\nRed Bull trägt kein offizielles Vegan-Siegel. Da der Konzern in der Vergangenheit (indirekt) Tierversuche unterstützt hat und diesbezü",
+      "clicks_no_aio": 51,
+      "clicks_with_aio": 59,
+      "monthly_impact": 8
+    },
+    {
+      "query": "sind oreos vegan",
+      "imp": 3321,
+      "pos": 7.5,
+      "clicks": 2,
+      "monthly_impressions": 1107,
+      "has_aio": true,
+      "ref_count": 4,
+      "refs": [
+        {
+          "domain": "vegpool.de",
+          "title": "Sind Oreo-Kekse eigentlich vegan? Welche Sorten? - Vegpool",
+          "url": "https://vegpool.de/magazin/sind-oreo-vegan.html"
+        },
+        {
+          "domain": "this-is-vegan.com",
+          "title": "Sind Oreo Kekse wirklich vegan? Was du über die Zutaten wissen solltest",
+          "url": "https://this-is-vegan.com/oreo-kekse-vegan/"
+        },
+        {
+          "domain": "www.oreo.eu",
+          "title": "Nice to know - OREO",
+          "url": "https://www.oreo.eu/de/faq/"
+        },
+        {
+          "domain": "www.veganblatt.com",
+          "title": "Ist Oreo vegan? Sorten, Inhaltsstoffe und Eis im Check - VeganBlatt",
+          "url": "https://www.veganblatt.com/a/ist-oreo-vegan"
+        }
+      ],
+      "vb_cited": true,
+      "vb_organic_pos": 11,
+      "aio_text": "Die klassischen Oreo-Kekse (wie Original, Double und Golden) sind von Haus aus vegan, da sie keine tierischen Zutaten enthalten. Der Hersteller weist jedoch darauf hin, dass produktionsbedingt Spuren von Milch enthalten sein können. OREO UK +1 Folgende Punkte solltest du beachten: Inhaltsstoffe: Die Kekse bestehen aus pflanzlichen Zutaten wie Weizenmehl, Zucker und pflanzlichen Fetten. Ausnahmen: Meide Sorten mit Schokoüberzug (z. B. Oreo White Enrobed) sowie Oreo-Eiscreme, da diese Milchprodukte enthalten. Regionale Unterschiede: Falls du Oreos aus den USA kaufst, kann der Zucker dort mit Kno",
+      "clicks_no_aio": 27,
+      "clicks_with_aio": 42,
+      "monthly_impact": 15
+    },
+    {
+      "query": "ist honig vegan",
+      "imp": 2214,
+      "pos": 3.2,
+      "clicks": 0,
+      "monthly_impressions": 738,
+      "has_aio": true,
+      "ref_count": 11,
+      "refs": [
+        {
+          "domain": "www.peta.de",
+          "title": "Ist Honig vegan? 8 Gründe gegen Bienenhonig - PETA",
+          "url": "https://www.peta.de/themen/honig-vegan/"
+        },
+        {
+          "domain": "vegablum.de",
+          "title": "Ist Honig vegan? Wir klären auf über die Bienchen und die Blümchen!",
+          "url": "https://vegablum.de/pages/ist-honig-vegan"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "Was ist an #Honig eigentlich nicht #vegan? 🤨🍯",
+          "url": "https://www.youtube.com/shorts/rmrFI1kYjZU"
+        },
+        {
+          "domain": "www.oekotest.de",
+          "title": "Ist Honig vegan? - ÖKO-TEST",
+          "url": "https://www.oekotest.de/essen-trinken/Ist-Honig-vegan_13232_1.html"
+        },
+        {
+          "domain": "www.schloerholz.de",
+          "title": "Ist Honig vegan? - Imkerei Schloerholz",
+          "url": "https://www.schloerholz.de/wissen.html"
+        },
+        {
+          "domain": "de.wikipedia.org",
+          "title": "Veganer Honig - Wikipedia",
+          "url": "https://de.wikipedia.org/wiki/Veganer_Honig"
+        },
+        {
+          "domain": "www.sueddeutsche.de",
+          "title": "Vegane Honigalternativen enthalten oft viele Zusatzstoffe - Gesundheit",
+          "url": "https://www.sueddeutsche.de/gesundheit/tierisches-dilemma-vegane-honigalternativen-enthalten-oft-viele-zusatzstoffe-dpa.urn-newsml-dpa-com-20090101-230412-99-286371"
+        },
+        {
+          "domain": "a-journey-to-ourselves.com",
+          "title": "Ist Honig vegan? Warum Honig tierisch ist & welche Alternativen es gibt",
+          "url": "https://a-journey-to-ourselves.com/ist-honig-vegan/"
+        }
+      ],
+      "vb_cited": false,
+      "vb_organic_pos": null,
+      "aio_text": "Nein, Honig ist nicht vegan. Da er von Bienen produziert wird, gilt er als tierisches Erzeugnis und widerspricht dem Grundsatz, auf jegliche Ausbeutung von Tieren zu verzichten. Vegablum +1 Die wichtigsten Gründe, warum Honig für Veganer tabu ist: Tierisches Produkt: Bienen verarbeiten Nektar mit eigenen Enzymen, wodurch ein tierisches Erzeugnis entsteht. Wintervorrat: Honig dient den Bienen als Nahrung für den Winter. Den Tieren den Honig zu entnehmen, gilt im Veganismus als Ausbeutung. Tierleid: In der konventionellen Imkerei kommt es oft vor, dass Bienen bei der Honigernte versehentlich get",
+      "clicks_no_aio": 74,
+      "clicks_with_aio": 41,
+      "monthly_impact": -33
+    },
+    {
+      "query": "ist agavendicksaft gesund",
+      "imp": 2044,
+      "pos": 2.5,
+      "clicks": 0,
+      "monthly_impressions": 681,
+      "has_aio": true,
+      "ref_count": 3,
+      "refs": [
+        {
+          "domain": "www.barmer.de",
+          "title": "Agavendicksaft statt Zucker: gesund? - Barmer",
+          "url": "https://www.barmer.de/gesundheit-verstehen/leben/ernaehrung/agavendicksaft-1257750"
+        },
+        {
+          "domain": "www.ruf.eu",
+          "title": "Agavendicksaft statt Zucker: Vorteile, Nachteile & Anwendung - RUF",
+          "url": "https://www.ruf.eu/a/magazin/agavendicksaft-statt-zucker/"
+        },
+        {
+          "domain": "www.instagram.com",
+          "title": "am Ende landen im Darm immer die gleichen Moleküle: Glukose und ...",
+          "url": "https://www.instagram.com/reel/DRzniHRCL1f/"
+        }
+      ],
+      "vb_cited": false,
+      "vb_organic_pos": null,
+      "aio_text": "Agavendicksaft ist nicht grundsätzlich gesund. Zwar hat er einen niedrigen glykämischen Index und ist rein pflanzlich, doch besteht er zu 70 bis 90 % aus Fruktose. Ein hoher Konsum kann die Leber belasten, Fettstoffwechselstörungen begünstigen und ist für Menschen mit Fruktoseintoleranz ungeeignet. BARMER +1 Vorteile: Niedriger glykämischer Index: Der Blutzuckerspiegel steigt langsamer an als bei normalem Haushaltszucker. Höhere Süßkraft: Sie benötigen weniger Menge zum Süßen als bei klassischem Zucker. Vegan: Da es rein pflanzlich ist, wird es gerne als Honig-Alternative in der veganen Ernähr",
+      "clicks_no_aio": 102,
+      "clicks_with_aio": 56,
+      "monthly_impact": -46
+    },
+    {
+      "query": "ist tofu gesund",
+      "imp": 928,
+      "pos": 2.2,
+      "clicks": 0,
+      "monthly_impressions": 309,
+      "has_aio": true,
+      "ref_count": 9,
+      "refs": [
+        {
+          "domain": "www.ndr.de",
+          "title": "Tofu: Wie gesund ist Quark aus Sojabohnen? | ndr.de",
+          "url": "https://www.ndr.de/ratgeber/gesundheit/Tofu-Wie-gesund-ist-Quark-aus-Sojabohnen,tofu128.html"
+        },
+        {
+          "domain": "www.oekotest.de",
+          "title": "Räuchertofu-Test: Ist geräucherter Tofu gesund? - ÖKO-TEST",
+          "url": "https://www.oekotest.de/essen-trinken/Raeuchertofu-Test-Ist-geraeucherter-Tofu-gesund_15123_1.html"
+        },
+        {
+          "domain": "www.fitbook.de",
+          "title": "Wie Tofu den weiblichen Hormonhaushalt beeinflussen kann",
+          "url": "https://www.fitbook.de/ernaehrung/tofu-gesund-und-halbwahrheiten"
+        },
+        {
+          "domain": "www.bio-fabrik.de",
+          "title": "Was ist Tofu, ist er gesund und wie wird er zubereitet? - Bio-Fabrik",
+          "url": "https://www.bio-fabrik.de/gesunde-ecke/was-ist-tofu-ist-er-gesund-und-wie-wird-er-zubereitetg-69088/"
+        },
+        {
+          "domain": "www.lifeverde.de",
+          "title": "Tofu für Anfänger*innen! Rezepte mit Tofu sind In, aber ist Tofu gesund ...",
+          "url": "https://www.lifeverde.de/nachhaltigkeitsmagazin/news-tipps/tofu-fuer-anfaengerinnen-rezepte-mit-tofu-sind-in-aber-ist-tofu-gesund-oder-nicht"
+        },
+        {
+          "domain": "www.youtube.com",
+          "title": "Was genau ist Tofu? | #mahlZeit | DAK-Gesundheit",
+          "url": "https://www.youtube.com/watch?v=kZwIXkof6AI"
+        },
+        {
+          "domain": "www.diabetesde.org",
+          "title": "Soja, Tofu und Tempeh: Fleischersatzprodukte aus der ...",
+          "url": "https://www.diabetesde.org/taxonomy/term/5997"
+        },
+        {
+          "domain": "schrotundkorn.de",
+          "title": "Tofu: Sorten, Nährwerte, Rezepte - Schrot&Korn",
+          "url": "https://schrotundkorn.de/essen/tofu"
+        }
+      ],
+      "vb_cited": false,
+      "vb_organic_pos": null,
+      "aio_text": "Tofu ist ein äußerst gesundes, kalorienarmes und vielseitiges Lebensmittel. Als hervorragende pflanzliche Proteinquelle liefert der Sojaquark alle acht essenziellen Aminosäuren und wichtige Mineralstoffe wie Kalzium und Eisen, was ihn ideal für eine ausgewogene Ernährung macht. FITBOOK +3 Hohe Proteinqualität: 100 g Tofu enthalten rund 15 bis 17 g hochwertiges Eiweiß, das der Körper sehr gut verwerten kann. Gut für Herz und Figur: Tofu ist cholesterinfrei, arm an gesättigten Fetten und hat wenig Kalorien. Blutzuckerneutral: Die Kohlenhydrate im Tofu beeinflussen den Blutzuckerspiegel kaum, wes",
+      "clicks_no_aio": 46,
+      "clicks_with_aio": 25,
+      "monthly_impact": -21
+    },
+    {
+      "query": "ist margarine vegan",
+      "imp": 947,
+      "pos": 2.5,
+      "clicks": 0,
+      "monthly_impressions": 316,
+      "has_aio": true,
+      "ref_count": 14,
+      "refs": [
+        {
+          "domain": "www.reddit.com",
+          "title": "Ist Margarine nicht Vegan? : r/VeganDE - Reddit",
+          "url": "https://www.reddit.com/r/VeganDE/comments/11vj25j/ist_margarine_nicht_vegan/"
+        },
+        {
+          "domain": "www.peta.de",
+          "title": "Vegane Butter & Margarine: Die besten Alternativen - PETA",
+          "url": "https://www.peta.de/veganleben/vegane-butter-margarine/"
+        },
+        {
+          "domain": "www.oekotest.de",
+          "title": "Ist Margarine eigentlich immer vegan? - ÖKO-TEST",
+          "url": "https://www.oekotest.de/essen-trinken/Ist-Margarine-eigentlich-immer-vegan_12229_1.html"
+        },
+        {
+          "domain": "www.br.de",
+          "title": "Ist Margarine vegan? | Bayern 1 | Radio | BR.de",
+          "url": "https://www.br.de/radio/bayern1/margarine-106.html"
+        },
+        {
+          "domain": "www.lebensmittelklarheit.de",
+          "title": "Ist eine Pflanzenmargarine immer vegan? - Lebensmittelklarheit",
+          "url": "https://www.lebensmittelklarheit.de/fragen-antworten/ist-eine-pflanzenmargarine-immer-vegan"
+        },
+        {
+          "domain": "schrotundkorn.de",
+          "title": "Margarine: klimafreundlich und vegan? | Schrot&Korn",
+          "url": "https://schrotundkorn.de/essen/margarine"
+        },
+        {
+          "domain": "www.amazon.de",
+          "title": "Rama Original 400g Streichfett | 100% Pflanzlich, Vegan - Amazon.de",
+          "url": "https://www.amazon.de/Margarine-Original-Pflanzlich-Streichen-Backen/dp/B0BG8W9J9W"
+        },
+        {
+          "domain": "www.rewe.de",
+          "title": "Vegane Butter & Margarine online kaufen - REWE",
+          "url": "https://www.rewe.de/shop/c/butter-margarine/?attribute=vegan"
+        }
+      ],
+      "vb_cited": true,
+      "vb_organic_pos": null,
+      "aio_text": "Margarine ist nicht automatisch vegan. Zwar besteht sie hauptsächlich aus pflanzlichen Fetten, doch kann sie versteckte tierische Bestandteile wie Molke, Buttermilch, Fischöl oder nicht-veganes Vitamin D enthalten. Öko-Test +4 Um auf Nummer sicher zu gehen, sollten Sie folgende Dinge beachten: Vegane Kennzeichnung: Achten Sie auf das offizielle \"Vegan\"-Label, den Hinweis „100 % pflanzlich“ oder schauen Sie in der Zutatenliste direkt nach der Vegan-Auslobung. Typische versteckte Stoffe: Sogar als „rein pflanzlich“ deklarierte Margarinen können tierische Fette (bis zu 2 %) oder Molkeerzeugnisse ",
+      "clicks_no_aio": 47,
+      "clicks_with_aio": 34,
+      "monthly_impact": -13
+    },
+    {
+      "query": "ist skyr vegan",
+      "imp": 1205,
+      "pos": 8.3,
+      "clicks": 0,
+      "monthly_impressions": 402,
+      "has_aio": true,
+      "ref_count": 11,
+      "refs": [
+        {
+          "domain": "www.rewe.de",
+          "title": "Alpro Skyr-Alternative Ohne Zucker vegan 400g - REWE",
+          "url": "https://www.rewe.de/shop/p/alpro-skyr-alternative-ohne-zucker-vegan-400g/8287926"
+        },
+        {
+          "domain": "www.alpro.com",
+          "title": "Skyr Alternative Ohne Zucker - Alpro",
+          "url": "https://www.alpro.com/de-de/products/plant-based-alternative-to-yogurt/skyr-style-unsweetened-400g"
+        },
+        {
+          "domain": "www.peta.de",
+          "title": "Veganer Quark: Die besten pflanzlichen Alternativen & weitere ...",
+          "url": "https://www.peta.de/veganleben/veganer-quark/"
+        },
+        {
+          "domain": "www.lotta-karotta.de",
+          "title": "Skyr Natur vegan - Lotta Karotta",
+          "url": "https://www.lotta-karotta.de/p/skyr-natur-vegan-8019"
+        },
+        {
+          "domain": "veganfitness.de",
+          "title": "Die besten Alternativen zu Quark, Joghurt & Milch - Vegan Fitness",
+          "url": "https://veganfitness.de/vegane-milch-joghurt-quarkalternativen"
+        },
+        {
+          "domain": "www.veganblatt.com",
+          "title": "Veganer Skyr - VeganBlatt",
+          "url": "https://www.veganblatt.com/a/veganer-skyr"
+        },
+        {
+          "domain": "www.aok.de",
+          "title": "Skyr: Gesünder als Quark und Joghurt? Ein Nährwert-Vergleich - AOK",
+          "url": "https://www.aok.de/pk/magazin/ernaehrung/gesunde-ernaehrung/skyr-gesuender-als-quark-und-joghurt-ein-naehrwert-vergleich/"
+        },
+        {
+          "domain": "vegardians.de",
+          "title": "Ist Skyr vegan? Überraschend ehrlich und ultimativ erklärt",
+          "url": "https://vegardians.de/blogs/fragen-antworten/ist-skyr-vegan-uberraschend-ehrlich-und-ultimativ-erklart"
+        }
+      ],
+      "vb_cited": true,
+      "vb_organic_pos": 9,
+      "aio_text": "Traditioneller Skyr ist nicht vegan, da er aus Kuhmilch hergestellt wird. Es gibt jedoch zahlreiche hervorragende pflanzliche \"Skyr-Style\"-Alternativen im Supermarkt. www.alpro.com +2 Beliebte pflanzliche Optionen: Alpro Skyr-Alternative (z.B. bei REWE ): Meist auf Sojabasis, proteinreich und zuckerfrei. Alpro Skyr-Alternative REWE Sojade Skyr Natur : Eine Bio-Alternative mit Soja aus europäischem Anbau. Sojade Skyr Natur Um beim Einkaufen auf Nummer sicher zu gehen, achte einfach auf das offizielle Vegan-Label oder die Zutatenliste. Die pflanzlichen Pendants basieren meist auf Soja, Kokos ode",
+      "clicks_no_aio": 10,
+      "clicks_with_aio": 15,
+      "monthly_impact": 5
+    }
+  ]
+}
