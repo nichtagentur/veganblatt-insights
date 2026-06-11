@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VeganBlatt · Search Intelligence Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..700&family=Spline+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --ink:#0a140d; --ink2:#10241a; --paper:#f4f1e8; --paper2:#e9e4d4;
+  --leaf:#1fdc7a; --leaf-d:#0f9e57; --lime:#c8ff4d; --moss:#5a7d54;
+  --gold:#f0b429; --coral:#ff6b5a; --mist:rgba(244,241,232,.6);
+  --line:rgba(244,241,232,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink); color:var(--paper);
+  font-family:'Spline Sans',sans-serif; font-weight:400;
+  overflow-x:hidden; -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(1200px 600px at 80% -10%, rgba(31,220,122,.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(200,255,77,.06), transparent 60%);
+}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.035;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+::selection{background:var(--leaf);color:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.mono{font-family:'Spline Sans Mono',monospace}
+.eyebrow{font-family:'Spline Sans Mono',monospace;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--leaf);font-weight:500}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;line-height:1;letter-spacing:-.02em}
+
+/* HERO */
+header{position:relative;padding:64px 0 40px;min-height:96vh;display:flex;flex-direction:column;justify-content:center}
+.topbar{display:flex;justify-content:space-between;align-items:center;position:absolute;top:34px;left:0;right:0}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;width:100%}
+.brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem;letter-spacing:-.02em}
+.brand b{color:var(--leaf)}
+.tag{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mist)}
+.hero-leaf{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-size:34rem;line-height:1;color:var(--leaf);opacity:.06;font-family:'Fraunces',serif;pointer-events:none;user-select:none}
+.hero h1{font-size:clamp(3rem,9vw,8.5rem);font-weight:300;max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--leaf);font-weight:400}
+.hero .sub{margin-top:28px;max-width:54ch;font-size:1.15rem;color:var(--mist);line-height:1.55}
+.hero .range{margin-top:18px;font-size:.8rem;letter-spacing:.12em;color:var(--moss)}
+.scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mist);display:flex;flex-direction:column;align-items:center;gap:8px;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateX(-50%) translateY(8px)}}
+
+/* KPI strip */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:54px}
+.kpi{padding:30px 26px;border-right:1px solid var(--line);position:relative}
+.kpi:last-child{border-right:none}
+.kpi .num{font-family:'Fraunces',serif;font-size:clamp(2.2rem,4.4vw,3.6rem);font-weight:500;line-height:1;letter-spacing:-.03em}
+.kpi .num.hl{color:var(--leaf)}
+.kpi .lab{margin-top:10px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+.kpi .delta{display:inline-block;margin-top:6px;font-family:'Spline Sans Mono',monospace;font-size:.78rem;color:var(--lime)}
+
+/* sections */
+section{padding:96px 0;border-top:1px solid var(--line);position:relative}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:42px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3.4rem);font-weight:400;max-width:18ch}
+.sec-head h2 em{font-style:italic;color:var(--leaf)}
+.sec-head .note{max-width:34ch;color:var(--mist);font-size:.95rem;line-height:1.55}
+.idx{font-family:'Spline Sans Mono',monospace;font-size:.74rem;color:var(--moss);letter-spacing:.2em}
+
+.card{background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:18px;padding:26px}
+.chart-wrap{height:420px;position:relative}
+
+/* themes */
+.themes{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.theme-row{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.theme-row:last-child{border-bottom:none}
+.theme-row .tn{font-family:'Fraunces',serif;font-size:1.3rem}
+.theme-row .bar{grid-column:1/-1;height:8px;border-radius:6px;background:rgba(255,255,255,.06);overflow:hidden;margin-top:4px}
+.theme-row .bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--leaf-d),var(--leaf));width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.theme-row .v{font-family:'Spline Sans Mono',monospace;color:var(--mist);font-size:.85rem;white-space:nowrap}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th{text-align:left;font-family:'Spline Sans Mono',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--moss);padding:0 14px 14px;font-weight:500}
+th.r,td.r{text-align:right}
+td{padding:14px;border-top:1px solid var(--line);vertical-align:middle}
+tr.q td{transition:background .2s}
+tbody tr:hover td{background:rgba(31,220,122,.05)}
+.qname{font-family:'Fraunces',serif;font-size:1.08rem}
+.pill{display:inline-block;padding:3px 10px;border-radius:20px;font-family:'Spline Sans Mono',monospace;font-size:.74rem;font-weight:500}
+.pill.pos{background:rgba(240,180,41,.15);color:var(--gold)}
+.pill.ctr{background:rgba(255,107,90,.14);color:var(--coral)}
+.uplift{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--leaf);font-weight:600}
+.uplift small{font-size:.7rem;color:var(--mist);font-family:'Spline Sans Mono',monospace;display:block;font-weight:400}
+.bar-cell{position:relative}
+.bar-cell .mini{position:absolute;left:0;bottom:6px;height:3px;background:var(--leaf);opacity:.5;border-radius:3px}
+
+/* opportunity highlight band */
+.band{background:linear-gradient(135deg,rgba(31,220,122,.10),rgba(200,255,77,.04));border:1px solid rgba(31,220,122,.22)}
+.bigstat{display:flex;gap:50px;flex-wrap:wrap;margin-bottom:38px}
+.bigstat div .n{font-family:'Fraunces',serif;font-size:clamp(2.6rem,6vw,4.6rem);color:var(--leaf);font-weight:500;line-height:.9}
+.bigstat div .l{margin-top:8px;color:var(--mist);font-size:.85rem;max-width:22ch}
+
+/* strategy cards */
+.strat{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.scard{padding:30px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.02);position:relative;overflow:hidden}
+.scard:before{content:attr(data-n);position:absolute;right:18px;top:6px;font-family:'Fraunces',serif;font-size:5rem;color:var(--leaf);opacity:.10;font-weight:600}
+.scard h3{font-size:1.5rem;font-weight:500;margin-bottom:12px;max-width:20ch}
+.scard p{color:var(--mist);line-height:1.6;font-size:.96rem}
+.scard .do{margin-top:16px;font-family:'Spline Sans Mono',monospace;font-size:.78rem;color:var(--lime);letter-spacing:.04em}
+
+/* gaps grid */
+.gaps{display:flex;flex-wrap:wrap;gap:12px}
+.gap{padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:3px}
+.gap .gq{font-family:'Fraunces',serif;font-size:1.05rem}
+.gap .gm{font-family:'Spline Sans Mono',monospace;font-size:.72rem;color:var(--mist)}
+
+/* quality + footer */
+.quality{display:flex;gap:18px;align-items:flex-start;padding:24px 28px;border-radius:16px;border:1px solid rgba(240,180,41,.3);background:rgba(240,180,41,.06)}
+.quality .ic{font-family:'Fraunces',serif;font-size:2rem;color:var(--gold);line-height:1}
+.quality b{color:var(--gold)}
+footer{padding:60px 0;border-top:1px solid var(--line);color:var(--mist);font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:820px){
+  .kpis{grid-template-columns:repeat(2,1fr)}.kpi:nth-child(2){border-right:none}
+  .themes,.strat{grid-template-columns:1fr}.hero-leaf{display:none}
+  .kpi:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <div class="topbar"><div class="wrap">
+    <div class="brand">Vegan<b>Blatt</b></div>
+    <div class="tag">Search Intelligence · Q2 2026</div>
+  </div></div>
+  <div class="hero-leaf">❧</div>
+  <div class="wrap hero">
+    <div class="eyebrow">Google Search Console · 90 Tage</div>
+    <h1>Der Wendepunkt-<em>Report</em>.</h1>
+    <p class="sub">Was die Leute bei Google suchen, bevor sie auf VeganBlatt landen — und wo die Redaktion die nächsten Klicks holt. Ein datengetriebener Blick auf 90 Tage organisches Wachstum.</p>
+    <p class="range mono" id="range"></p>
+    <div class="kpis reveal">
+      <div class="kpi"><div class="num hl" data-count="33464">0</div><div class="lab">Klicks gesamt</div></div>
+      <div class="kpi"><div class="num" data-count="2556459">0</div><div class="lab">Impressionen</div></div>
+      <div class="kpi"><div class="num" data-count="312" data-suffix="%"><span>0</span></div><div class="lab">Klick-Wachstum</div><span class="delta">▲ 4,1× in 90 Tagen</span></div>
+      <div class="kpi"><div class="num" data-count="9.1" data-dec="1">0</div><div class="lab">Ø Position</div><span class="delta">Seite 1 in Reichweite</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">scrollen<span>↓</span></div>
+</header>
+
+<section id="growth">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="idx">01 — WACHSTUM</span><h2>Eine Kurve, die <em>nach oben</em> zeigt.</h2></div>
+      <p class="note">Tägliche Klicks haben sich in drei Monaten mehr als vervierfacht. Der gleitende 7-Tage-Schnitt (hell) glättet das Wochenende und zeigt einen ungebrochenen Aufwärtstrend.</p>
+    </div>
+    <div class="card reveal"><div class="chart-wrap"><canvas id="growthChart"></canvas></div></div>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="idx">02 — INHALTS-DNA</span><h2>Wofür VeganBlatt <em>gefunden</em> wird.</h2></div>
+      <p class="note">25.000 Suchbegriffe, gruppiert nach Thema. Produkt- & Marken-Checks und Rezepte tragen den Traffic — „Ist X vegan?" und E-Nummern sind riesig in Impressionen, aber noch schwach in Klicks.</p>
+    </div>
+    <div class="themes">
+      <div class="reveal" id="themeList"></div>
+      <div class="card reveal"><div class="chart-wrap" style="height:340px"><canvas id="themeChart"></canvas></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="top">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="idx">03 — TOP-PERFORMER</span><h2>Die <em>Klick-Magnete</em>.</h2></div>
+      <p class="note">Die 12 stärksten Suchbegriffe. „vegane zahnpasta" und „skittles vegan" sind echte Zugpferde — und zeigen, dass konkrete Produktfragen am besten konvertieren.</p>
+    </div>
+    <div class="card reveal" style="padding:10px 16px"><table id="topTable"><thead><tr>
+      <th>Suchbegriff</th><th class="r">Klicks</th><th class="r">Impr.</th><th class="r">CTR</th><th class="r">Position</th>
+    </tr></thead><tbody></tbody></table></div>
+  </div>
+</section>
+
+<section id="opps">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="idx">04 — DER SCHATZ</span><h2>„Striking Distance": <em>fast</em> auf Seite 1.</h2></div>
+      <p class="note">Diese Begriffe ranken auf Position 4–15 mit tausenden Impressionen — aber kaum jemand klickt. Bessere Titel, Snippets & Inhalte holen sie nach oben. Das ist die wirkungsvollste To-do-Liste der Redaktion.</p>
+    </div>
+    <div class="card band reveal" style="padding:34px">
+      <div class="bigstat">
+        <div><div class="n" id="oppSum">0</div><div class="l">geschätzte zusätzliche Klicks / Monat, wenn diese Seiten optimiert werden</div></div>
+        <div><div class="n" data-count="18" class="js">0</div><div class="l">Begriffe in Reichweite, sofort umsetzbar</div></div>
+      </div>
+      <table id="oppTable"><thead><tr>
+        <th>Suchbegriff</th><th class="r">Impr.</th><th class="r">Position</th><th class="r">CTR jetzt</th><th class="r">Potenzial</th>
+      </tr></thead><tbody></tbody></table>
+    </div>
+  </div>
+</section>
+
+<section id="gaps">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="idx">05 — INHALTS-LÜCKEN</span><h2>Sichtbar, aber <em>ungeklickt</em>.</h2></div>
+      <p class="note">Begriffe mit hunderten bis tausenden Impressionen und null Klicks. Hier rankt VeganBlatt mit einer schwachen oder fehlenden Antwort — perfekte Kandidaten für neue oder überarbeitete Artikel.</p>
+    </div>
+    <div class="gaps reveal" id="gapList"></div>
+  </div>
+</section>
+
+<section id="strategy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="idx">06 — STRATEGIE</span><h2>Vier Hebel für das <em>nächste</em> Quartal.</h2></div>
+      <p class="note">Aus den Daten destilliert — was die Redaktion konkret tun sollte, in Klartext.</p>
+    </div>
+    <div class="strat reveal">
+      <div class="scard" data-n="A"><h3>„Ist X vegan?"-Hub bauen</h3><p>1.889 Begriffe, 134.000 Impressionen — aber nur 554 Klicks. Riesige Nachfrage, schwache Ausschöpfung. Ein verlinkter Themen-Hub mit klaren Ja/Nein-Antworten (Honig, Kakaobutter, Skyr, Oreo) hebt Dutzende Seiten gleichzeitig.</p><div class="do">→ 1 Hub-Seite + 15 kurze Antwort-Artikel</div></div>
+      <div class="scard" data-n="B"><h3>E-Nummern-Serie ausbauen</h3><p>e920, e120, e631 ranken bereits auf Seite 1, konvertieren aber kaum. Wenige, hochspezialisierte Seiten mit großer Nachfrage — Snippets & Tabellen optimieren, untereinander verlinken.</p><div class="do">→ Snippet-Optimierung für 5 E-Nummern-Seiten</div></div>
+      <div class="scard" data-n="C"><h3>Produkt-Checks verdoppeln</h3><p>Produkte & Marken sind mit 5.421 Klicks das stärkste Thema. „skittles", „oreo", „haribo", „red bull" — die Redaktion sollte das erfolgreichste Format systematisch auf weitere bekannte Marken ausrollen.</p><div class="do">→ Redaktioneller Kalender: 2 Produkt-Checks / Woche</div></div>
+      <div class="scard" data-n="D"><h3>Titel & Snippets reparieren</h3><p>Die Top-Chance liegt nicht in neuen Inhalten, sondern in CTR. Begriffe auf Position 5–7 mit unter 1 % CTR haben ein Titel-Problem. Title-Tags und Meta-Descriptions der Striking-Distance-Liste überarbeiten.</p><div class="do">→ 18 Title-Tags diese Woche umschreiben</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="quality">
+  <div class="wrap">
+    <div class="quality reveal">
+      <div class="ic">⚠</div>
+      <div><b>Daten-Hinweis (ehrliche Wissenschaft):</b> Der Brand/Non-Brand-Filter dieser Auswertung liefert 0 markenbezogene Klicks — obwohl der Begriff „veganblatt" selbst 72 Klicks hat. Der Marken-Split ist also unzuverlässig und sollte vor der nächsten Auswertung neu konfiguriert werden. Alle anderen Zahlen sind valide.</div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:12px">
+  <span>VeganBlatt Search Intelligence · Quelle: Google Search Console (sc-domain:veganblatt.com)</span>
+  <span class="mono" id="foot"></span>
+</div></footer>
+
+<script>
+const fmt=n=>n.toLocaleString('de-DE');
+async function boot(){
+  const D = await fetch('data.json').then(r=>r.json());
+  document.getElementById('range').textContent = `${D.meta.start} → ${D.meta.end}  ·  ${D.meta.days} Tage  ·  erstellt ${D.meta.generated}`;
+  document.getElementById('foot').textContent = `generated ${D.meta.generated}`;
+
+  // counters
+  const animateCount=(el)=>{
+    const tgt=parseFloat(el.dataset.count), dec=+(el.dataset.dec||0), suf=el.dataset.suffix||'';
+    const span=el.querySelector('span'); const set=v=>{const t=dec?v.toFixed(dec).replace('.',','):fmt(Math.round(v));(span||el).textContent=t+suf;};
+    let s=null,dur=1600; const step=t=>{s=s||t;const p=Math.min((t-s)/dur,1);const e=1-Math.pow(1-p,3);set(tgt*e);if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);
+  };
+
+  // GROWTH chart
+  const g=D.daily;
+  new Chart(document.getElementById('growthChart'),{
+    type:'line',
+    data:{labels:g.map(d=>d.date),datasets:[
+      {label:'Impressionen',data:g.map(d=>d.impressions),yAxisID:'y1',borderColor:'rgba(200,255,77,.35)',backgroundColor:'rgba(200,255,77,.04)',fill:true,borderWidth:1,pointRadius:0,tension:.4},
+      {label:'Klicks (täglich)',data:g.map(d=>d.clicks),yAxisID:'y',borderColor:'rgba(31,220,122,.45)',borderWidth:1.5,pointRadius:0,tension:.35},
+      {label:'Klicks · 7-Tage-Ø',data:g.map(d=>d.roll),yAxisID:'y',borderColor:'#1fdc7a',borderWidth:3,pointRadius:0,tension:.4,
+        backgroundColor:(c)=>{const a=c.chart.ctx.createLinearGradient(0,0,0,420);a.addColorStop(0,'rgba(31,220,122,.28)');a.addColorStop(1,'rgba(31,220,122,0)');return a;},fill:true},
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+      plugins:{legend:{labels:{color:'#9fb0a4',font:{family:'Spline Sans Mono',size:11},usePointStyle:true,pointStyleWidth:8}},
+        tooltip:{backgroundColor:'#0a140d',borderColor:'rgba(31,220,122,.4)',borderWidth:1,titleFont:{family:'Spline Sans Mono'},bodyFont:{family:'Spline Sans'},padding:12,callbacks:{label:c=>` ${c.dataset.label}: ${fmt(Math.round(c.parsed.y))}`}}},
+      scales:{
+        x:{grid:{display:false},ticks:{color:'#5a7d54',maxTicksLimit:7,font:{family:'Spline Sans Mono',size:10}}},
+        y:{position:'left',grid:{color:'rgba(244,241,232,.06)'},ticks:{color:'#9fb0a4',font:{family:'Spline Sans Mono',size:10}},title:{display:true,text:'Klicks',color:'#5a7d54',font:{size:10}}},
+        y1:{position:'right',grid:{display:false},ticks:{color:'#5a7d54',font:{family:'Spline Sans Mono',size:10},callback:v=>v/1000+'k'},title:{display:true,text:'Impressionen',color:'#5a7d54',font:{size:10}}},
+      }}
+  });
+
+  // THEMES
+  const th=D.themes, maxc=Math.max(...th.map(t=>t.clicks));
+  document.getElementById('themeList').innerHTML=th.map(t=>`
+    <div class="theme-row"><div class="tn">${t.theme}</div><div class="v">${fmt(t.clicks)} Klicks · ${fmt(t.queries)} Begriffe</div>
+    <div class="bar"><i data-w="${(t.clicks/maxc*100).toFixed(1)}"></i></div></div>`).join('');
+  const cols=['#1fdc7a','#c8ff4d','#5a7d54','#f0b429','#ff6b5a','#2f6b4a'];
+  new Chart(document.getElementById('themeChart'),{
+    type:'doughnut',
+    data:{labels:th.map(t=>t.theme),datasets:[{data:th.map(t=>t.impressions),backgroundColor:cols,borderColor:'#0a140d',borderWidth:3,hoverOffset:10}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'62%',
+      plugins:{legend:{position:'bottom',labels:{color:'#9fb0a4',font:{family:'Spline Sans Mono',size:10},boxWidth:10,padding:10}},
+        tooltip:{callbacks:{label:c=>` ${c.label}: ${fmt(c.parsed)} Impr.`},backgroundColor:'#0a140d',titleFont:{family:'Spline Sans Mono'}},
+        title:{display:true,text:'Impressionen nach Thema',color:'#5a7d54',font:{family:'Spline Sans Mono',size:11}}}}
+  });
+
+  // TOP TABLE
+  const tt=document.querySelector('#topTable tbody'), maxk=Math.max(...D.top_queries.map(q=>q.clicks));
+  tt.innerHTML=D.top_queries.slice(0,12).map(q=>`<tr class="q">
+    <td class="bar-cell"><span class="qname">${q.query}</span><span class="mini" style="width:${q.clicks/maxk*180}px"></span></td>
+    <td class="r mono">${q.clicks}</td><td class="r mono">${fmt(q.impressions)}</td>
+    <td class="r"><span class="pill ctr">${(q.ctr*100).toFixed(1)}%</span></td>
+    <td class="r"><span class="pill pos">${q.position.toFixed(1)}</span></td></tr>`).join('');
+
+  // OPP TABLE
+  const ob=document.querySelector('#oppTable tbody');
+  ob.innerHTML=D.striking_distance.map(o=>`<tr class="q">
+    <td><span class="qname">${o.query}</span></td>
+    <td class="r mono">${fmt(o.impressions)}</td>
+    <td class="r"><span class="pill pos">${o.position.toFixed(1)}</span></td>
+    <td class="r"><span class="pill ctr">${(o.ctr*100).toFixed(2)}%</span></td>
+    <td class="r"><span class="uplift">+${o.uplift_per_month}<small>Klicks/Mon</small></span></td></tr>`).join('');
+  const oppSum=D.striking_distance.reduce((a,o)=>a+o.uplift_per_month,0);
+  const oppEl=document.getElementById('oppSum');oppEl.dataset.count=oppSum;oppEl.dataset.suffix='';
+
+  // GAPS
+  document.getElementById('gapList').innerHTML=D.zero_click.map(z=>`
+    <div class="gap"><span class="gq">${z.query}</span><span class="gm">${fmt(z.impressions)} Impr. · Pos. ${z.position.toFixed(1)} · 0 Klicks</span></div>`).join('');
+
+  // reveal + count observers
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');
+    e.target.querySelectorAll('[data-count]').forEach(animateCount);
+    e.target.querySelectorAll('.bar i[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');
+    io.unobserve(e.target);}}),{threshold:.18});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // hero counters fire immediately
+  document.querySelectorAll('header [data-count]').forEach(animateCount);
+  document.querySelector('header .kpis').classList.add('in');
+}
+boot();
+</script>
+</body>
+</html>
