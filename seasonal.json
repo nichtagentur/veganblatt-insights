@@ -1,0 +1,893 @@
+{
+  "method": "Detrending: clicks / 15-Tage zentrierter gleitender Mittelwert. Ratio 1,00 = exakt im Trend; >1 ueberdurchschnittlich, <1 darunter. So wird das starke Gesamtwachstum herausgerechnet.",
+  "daily": [
+    {
+      "date": "2026-03-08",
+      "clicks": 149,
+      "expected": 167.5,
+      "ratio": 0.89,
+      "dev_pct": -11.0
+    },
+    {
+      "date": "2026-03-09",
+      "clicks": 157,
+      "expected": 169.4,
+      "ratio": 0.927,
+      "dev_pct": -7.3
+    },
+    {
+      "date": "2026-03-10",
+      "clicks": 160,
+      "expected": 170.2,
+      "ratio": 0.94,
+      "dev_pct": -6.0
+    },
+    {
+      "date": "2026-03-11",
+      "clicks": 160,
+      "expected": 166.5,
+      "ratio": 0.961,
+      "dev_pct": -3.9
+    },
+    {
+      "date": "2026-03-12",
+      "clicks": 159,
+      "expected": 164.2,
+      "ratio": 0.969,
+      "dev_pct": -3.1
+    },
+    {
+      "date": "2026-03-13",
+      "clicks": 163,
+      "expected": 161.7,
+      "ratio": 1.008,
+      "dev_pct": 0.8
+    },
+    {
+      "date": "2026-03-14",
+      "clicks": 199,
+      "expected": 163.0,
+      "ratio": 1.221,
+      "dev_pct": 22.1
+    },
+    {
+      "date": "2026-03-15",
+      "clicks": 193,
+      "expected": 165.4,
+      "ratio": 1.167,
+      "dev_pct": 16.7
+    },
+    {
+      "date": "2026-03-16",
+      "clicks": 185,
+      "expected": 165.4,
+      "ratio": 1.119,
+      "dev_pct": 11.9
+    },
+    {
+      "date": "2026-03-17",
+      "clicks": 177,
+      "expected": 166.5,
+      "ratio": 1.063,
+      "dev_pct": 6.3
+    },
+    {
+      "date": "2026-03-18",
+      "clicks": 130,
+      "expected": 168.5,
+      "ratio": 0.771,
+      "dev_pct": -22.9
+    },
+    {
+      "date": "2026-03-19",
+      "clicks": 138,
+      "expected": 171.5,
+      "ratio": 0.805,
+      "dev_pct": -19.5
+    },
+    {
+      "date": "2026-03-20",
+      "clicks": 132,
+      "expected": 175.3,
+      "ratio": 0.753,
+      "dev_pct": -24.7
+    },
+    {
+      "date": "2026-03-21",
+      "clicks": 180,
+      "expected": 177.9,
+      "ratio": 1.012,
+      "dev_pct": 1.2
+    },
+    {
+      "date": "2026-03-22",
+      "clicks": 199,
+      "expected": 179.3,
+      "ratio": 1.11,
+      "dev_pct": 11.0
+    },
+    {
+      "date": "2026-03-23",
+      "clicks": 149,
+      "expected": 181.5,
+      "ratio": 0.821,
+      "dev_pct": -17.9
+    },
+    {
+      "date": "2026-03-24",
+      "clicks": 174,
+      "expected": 187.1,
+      "ratio": 0.93,
+      "dev_pct": -7.0
+    },
+    {
+      "date": "2026-03-25",
+      "clicks": 190,
+      "expected": 194.1,
+      "ratio": 0.979,
+      "dev_pct": -2.1
+    },
+    {
+      "date": "2026-03-26",
+      "clicks": 205,
+      "expected": 204.2,
+      "ratio": 1.004,
+      "dev_pct": 0.4
+    },
+    {
+      "date": "2026-03-27",
+      "clicks": 215,
+      "expected": 217.9,
+      "ratio": 0.987,
+      "dev_pct": -1.3
+    },
+    {
+      "date": "2026-03-28",
+      "clicks": 202,
+      "expected": 229.8,
+      "ratio": 0.879,
+      "dev_pct": -12.1
+    },
+    {
+      "date": "2026-03-29",
+      "clicks": 221,
+      "expected": 232.0,
+      "ratio": 0.953,
+      "dev_pct": -4.7
+    },
+    {
+      "date": "2026-03-30",
+      "clicks": 225,
+      "expected": 234.5,
+      "ratio": 0.96,
+      "dev_pct": -4.0
+    },
+    {
+      "date": "2026-03-31",
+      "clicks": 269,
+      "expected": 239.7,
+      "ratio": 1.122,
+      "dev_pct": 12.2
+    },
+    {
+      "date": "2026-04-01",
+      "clicks": 282,
+      "expected": 243.5,
+      "ratio": 1.158,
+      "dev_pct": 15.8
+    },
+    {
+      "date": "2026-04-02",
+      "clicks": 282,
+      "expected": 248.3,
+      "ratio": 1.136,
+      "dev_pct": 13.6
+    },
+    {
+      "date": "2026-04-03",
+      "clicks": 343,
+      "expected": 256.1,
+      "ratio": 1.339,
+      "dev_pct": 33.9
+    },
+    {
+      "date": "2026-04-04",
+      "clicks": 311,
+      "expected": 261.1,
+      "ratio": 1.191,
+      "dev_pct": 19.1
+    },
+    {
+      "date": "2026-04-05",
+      "clicks": 213,
+      "expected": 265.4,
+      "ratio": 0.803,
+      "dev_pct": -19.7
+    },
+    {
+      "date": "2026-04-06",
+      "clicks": 236,
+      "expected": 270.3,
+      "ratio": 0.873,
+      "dev_pct": -12.7
+    },
+    {
+      "date": "2026-04-07",
+      "clicks": 227,
+      "expected": 272.3,
+      "ratio": 0.834,
+      "dev_pct": -16.6
+    },
+    {
+      "date": "2026-04-08",
+      "clicks": 231,
+      "expected": 271.5,
+      "ratio": 0.851,
+      "dev_pct": -14.9
+    },
+    {
+      "date": "2026-04-09",
+      "clicks": 262,
+      "expected": 272.5,
+      "ratio": 0.962,
+      "dev_pct": -3.8
+    },
+    {
+      "date": "2026-04-10",
+      "clicks": 322,
+      "expected": 272.5,
+      "ratio": 1.182,
+      "dev_pct": 18.2
+    },
+    {
+      "date": "2026-04-11",
+      "clicks": 290,
+      "expected": 269.3,
+      "ratio": 1.077,
+      "dev_pct": 7.7
+    },
+    {
+      "date": "2026-04-12",
+      "clicks": 267,
+      "expected": 270.1,
+      "ratio": 0.989,
+      "dev_pct": -1.1
+    },
+    {
+      "date": "2026-04-13",
+      "clicks": 294,
+      "expected": 275.7,
+      "ratio": 1.067,
+      "dev_pct": 6.7
+    },
+    {
+      "date": "2026-04-14",
+      "clicks": 256,
+      "expected": 280.8,
+      "ratio": 0.912,
+      "dev_pct": -8.8
+    },
+    {
+      "date": "2026-04-15",
+      "clicks": 256,
+      "expected": 286.4,
+      "ratio": 0.894,
+      "dev_pct": -10.6
+    },
+    {
+      "date": "2026-04-16",
+      "clicks": 297,
+      "expected": 292.1,
+      "ratio": 1.017,
+      "dev_pct": 1.7
+    },
+    {
+      "date": "2026-04-17",
+      "clicks": 283,
+      "expected": 297.9,
+      "ratio": 0.95,
+      "dev_pct": -5.0
+    },
+    {
+      "date": "2026-04-18",
+      "clicks": 294,
+      "expected": 300.2,
+      "ratio": 0.979,
+      "dev_pct": -2.1
+    },
+    {
+      "date": "2026-04-19",
+      "clicks": 323,
+      "expected": 302.6,
+      "ratio": 1.067,
+      "dev_pct": 6.7
+    },
+    {
+      "date": "2026-04-20",
+      "clicks": 297,
+      "expected": 309.2,
+      "ratio": 0.961,
+      "dev_pct": -3.9
+    },
+    {
+      "date": "2026-04-21",
+      "clicks": 313,
+      "expected": 312.2,
+      "ratio": 1.003,
+      "dev_pct": 0.3
+    },
+    {
+      "date": "2026-04-22",
+      "clicks": 311,
+      "expected": 322.5,
+      "ratio": 0.964,
+      "dev_pct": -3.6
+    },
+    {
+      "date": "2026-04-23",
+      "clicks": 317,
+      "expected": 329.2,
+      "ratio": 0.963,
+      "dev_pct": -3.7
+    },
+    {
+      "date": "2026-04-24",
+      "clicks": 348,
+      "expected": 333.5,
+      "ratio": 1.043,
+      "dev_pct": 4.3
+    },
+    {
+      "date": "2026-04-25",
+      "clicks": 357,
+      "expected": 342.9,
+      "ratio": 1.041,
+      "dev_pct": 4.1
+    },
+    {
+      "date": "2026-04-26",
+      "clicks": 326,
+      "expected": 352.3,
+      "ratio": 0.925,
+      "dev_pct": -7.5
+    },
+    {
+      "date": "2026-04-27",
+      "clicks": 366,
+      "expected": 358.5,
+      "ratio": 1.021,
+      "dev_pct": 2.1
+    },
+    {
+      "date": "2026-04-28",
+      "clicks": 339,
+      "expected": 366.2,
+      "ratio": 0.926,
+      "dev_pct": -7.4
+    },
+    {
+      "date": "2026-04-29",
+      "clicks": 410,
+      "expected": 373.7,
+      "ratio": 1.097,
+      "dev_pct": 9.7
+    },
+    {
+      "date": "2026-04-30",
+      "clicks": 357,
+      "expected": 382.8,
+      "ratio": 0.933,
+      "dev_pct": -6.7
+    },
+    {
+      "date": "2026-05-01",
+      "clicks": 362,
+      "expected": 393.2,
+      "ratio": 0.921,
+      "dev_pct": -7.9
+    },
+    {
+      "date": "2026-05-02",
+      "clicks": 424,
+      "expected": 407.2,
+      "ratio": 1.041,
+      "dev_pct": 4.1
+    },
+    {
+      "date": "2026-05-03",
+      "clicks": 434,
+      "expected": 416.7,
+      "ratio": 1.042,
+      "dev_pct": 4.2
+    },
+    {
+      "date": "2026-05-04",
+      "clicks": 416,
+      "expected": 427.7,
+      "ratio": 0.973,
+      "dev_pct": -2.7
+    },
+    {
+      "date": "2026-05-05",
+      "clicks": 413,
+      "expected": 434.4,
+      "ratio": 0.951,
+      "dev_pct": -4.9
+    },
+    {
+      "date": "2026-05-06",
+      "clicks": 425,
+      "expected": 443.9,
+      "ratio": 0.957,
+      "dev_pct": -4.3
+    },
+    {
+      "date": "2026-05-07",
+      "clicks": 448,
+      "expected": 455.5,
+      "ratio": 0.984,
+      "dev_pct": -1.6
+    },
+    {
+      "date": "2026-05-08",
+      "clicks": 473,
+      "expected": 466.9,
+      "ratio": 1.013,
+      "dev_pct": 1.3
+    },
+    {
+      "date": "2026-05-09",
+      "clicks": 558,
+      "expected": 481.7,
+      "ratio": 1.158,
+      "dev_pct": 15.8
+    },
+    {
+      "date": "2026-05-10",
+      "clicks": 499,
+      "expected": 487.5,
+      "ratio": 1.024,
+      "dev_pct": 2.4
+    },
+    {
+      "date": "2026-05-11",
+      "clicks": 492,
+      "expected": 490.2,
+      "ratio": 1.004,
+      "dev_pct": 0.4
+    },
+    {
+      "date": "2026-05-12",
+      "clicks": 466,
+      "expected": 494.6,
+      "ratio": 0.942,
+      "dev_pct": -5.8
+    },
+    {
+      "date": "2026-05-13",
+      "clicks": 482,
+      "expected": 506.5,
+      "ratio": 0.952,
+      "dev_pct": -4.8
+    },
+    {
+      "date": "2026-05-14",
+      "clicks": 583,
+      "expected": 513.1,
+      "ratio": 1.136,
+      "dev_pct": 13.6
+    },
+    {
+      "date": "2026-05-15",
+      "clicks": 528,
+      "expected": 519.2,
+      "ratio": 1.017,
+      "dev_pct": 1.7
+    },
+    {
+      "date": "2026-05-16",
+      "clicks": 585,
+      "expected": 528.1,
+      "ratio": 1.108,
+      "dev_pct": 10.8
+    },
+    {
+      "date": "2026-05-17",
+      "clicks": 510,
+      "expected": 526.5,
+      "ratio": 0.969,
+      "dev_pct": -3.1
+    },
+    {
+      "date": "2026-05-18",
+      "clicks": 475,
+      "expected": 532.2,
+      "ratio": 0.893,
+      "dev_pct": -10.7
+    },
+    {
+      "date": "2026-05-19",
+      "clicks": 482,
+      "expected": 541.6,
+      "ratio": 0.89,
+      "dev_pct": -11.0
+    },
+    {
+      "date": "2026-05-20",
+      "clicks": 592,
+      "expected": 551.3,
+      "ratio": 1.074,
+      "dev_pct": 7.4
+    },
+    {
+      "date": "2026-05-21",
+      "clicks": 524,
+      "expected": 560.9,
+      "ratio": 0.934,
+      "dev_pct": -6.6
+    },
+    {
+      "date": "2026-05-22",
+      "clicks": 539,
+      "expected": 564.8,
+      "ratio": 0.954,
+      "dev_pct": -4.6
+    },
+    {
+      "date": "2026-05-23",
+      "clicks": 606,
+      "expected": 576.1,
+      "ratio": 1.052,
+      "dev_pct": 5.2
+    },
+    {
+      "date": "2026-05-24",
+      "clicks": 535,
+      "expected": 583.5,
+      "ratio": 0.917,
+      "dev_pct": -8.3
+    },
+    {
+      "date": "2026-05-25",
+      "clicks": 584,
+      "expected": 594.9,
+      "ratio": 0.982,
+      "dev_pct": -1.8
+    },
+    {
+      "date": "2026-05-26",
+      "clicks": 633,
+      "expected": 611.1,
+      "ratio": 1.036,
+      "dev_pct": 3.6
+    },
+    {
+      "date": "2026-05-27",
+      "clicks": 611,
+      "expected": 627.1,
+      "ratio": 0.974,
+      "dev_pct": -2.6
+    },
+    {
+      "date": "2026-05-28",
+      "clicks": 627,
+      "expected": 640.1,
+      "ratio": 0.98,
+      "dev_pct": -2.0
+    },
+    {
+      "date": "2026-05-29",
+      "clicks": 641,
+      "expected": 663.5,
+      "ratio": 0.966,
+      "dev_pct": -3.4
+    },
+    {
+      "date": "2026-05-30",
+      "clicks": 698,
+      "expected": 672.4,
+      "ratio": 1.038,
+      "dev_pct": 3.8
+    },
+    {
+      "date": "2026-05-31",
+      "clicks": 695,
+      "expected": 677.5,
+      "ratio": 1.026,
+      "dev_pct": 2.6
+    },
+    {
+      "date": "2026-06-01",
+      "clicks": 681,
+      "expected": 689.3,
+      "ratio": 0.988,
+      "dev_pct": -1.2
+    },
+    {
+      "date": "2026-06-02",
+      "clicks": 718,
+      "expected": 698.9,
+      "ratio": 1.027,
+      "dev_pct": 2.7
+    },
+    {
+      "date": "2026-06-03",
+      "clicks": 723,
+      "expected": 705.5,
+      "ratio": 1.025,
+      "dev_pct": 2.5
+    },
+    {
+      "date": "2026-06-04",
+      "clicks": 786,
+      "expected": 716.0,
+      "ratio": 1.098,
+      "dev_pct": 9.8
+    },
+    {
+      "date": "2026-06-05",
+      "clicks": 875,
+      "expected": 727.1,
+      "ratio": 1.203,
+      "dev_pct": 20.3
+    }
+  ],
+  "holidays": [
+    {
+      "date": "2026-04-03",
+      "name": "Karfreitag (Good Friday)",
+      "scope": "DE",
+      "clicks": 343,
+      "expected": 256.1,
+      "dev_pct": 33.9,
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Ostersonntag (Easter Sunday)",
+      "scope": "AT+DE",
+      "clicks": 213,
+      "expected": 265.4,
+      "dev_pct": -19.7,
+      "weekday": "Sun"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Ostermontag (Easter Monday)",
+      "scope": "AT+DE",
+      "clicks": 236,
+      "expected": 270.3,
+      "dev_pct": -12.7,
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Staatsfeiertag / Tag der Arbeit",
+      "scope": "AT+DE",
+      "clicks": 362,
+      "expected": 393.2,
+      "dev_pct": -7.9,
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Muttertag (Mother's Day)",
+      "scope": "AT+DE",
+      "clicks": 499,
+      "expected": 487.5,
+      "dev_pct": 2.4,
+      "weekday": "Sun"
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Christi Himmelfahrt (Ascension)",
+      "scope": "AT+DE",
+      "clicks": 583,
+      "expected": 513.1,
+      "dev_pct": 13.6,
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-05-24",
+      "name": "Pfingstsonntag (Pentecost)",
+      "scope": "AT+DE",
+      "clicks": 535,
+      "expected": 583.5,
+      "dev_pct": -8.3,
+      "weekday": "Sun"
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Pfingstmontag (Whit Monday)",
+      "scope": "AT+DE",
+      "clicks": 584,
+      "expected": 594.9,
+      "dev_pct": -1.8,
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Fronleichnam (Corpus Christi)",
+      "scope": "AT+DE(t)",
+      "clicks": 786,
+      "expected": 716.0,
+      "dev_pct": 9.8,
+      "weekday": "Thu"
+    }
+  ],
+  "vacations": [
+    {
+      "name": "Osterferien (AT)",
+      "start": "2026-03-28",
+      "end": "2026-04-06",
+      "scope": "AT",
+      "avg_ratio": 1.041,
+      "dev_pct": 4.1,
+      "days": 10
+    },
+    {
+      "name": "Osterferien (DE, gemittelt)",
+      "start": "2026-03-23",
+      "end": "2026-04-11",
+      "scope": "DE",
+      "avg_ratio": 1.002,
+      "dev_pct": 0.2,
+      "days": 20
+    },
+    {
+      "name": "Pfingstferien (Teil DE/Bayern)",
+      "start": "2026-05-26",
+      "end": "2026-06-05",
+      "scope": "DE",
+      "avg_ratio": 1.033,
+      "dev_pct": 3.3,
+      "days": 11
+    }
+  ],
+  "weekday": [
+    {
+      "day": "Mon",
+      "avg_ratio": 0.968,
+      "dev_pct": -3.2
+    },
+    {
+      "day": "Tue",
+      "avg_ratio": 0.967,
+      "dev_pct": -3.3
+    },
+    {
+      "day": "Wed",
+      "avg_ratio": 0.974,
+      "dev_pct": -2.6
+    },
+    {
+      "day": "Thu",
+      "avg_ratio": 0.994,
+      "dev_pct": -0.6
+    },
+    {
+      "day": "Fri",
+      "avg_ratio": 1.026,
+      "dev_pct": 2.6
+    },
+    {
+      "day": "Sat",
+      "avg_ratio": 1.066,
+      "dev_pct": 6.6
+    },
+    {
+      "day": "Sun",
+      "avg_ratio": 0.991,
+      "dev_pct": -0.9
+    }
+  ],
+  "holiday_summary": {
+    "holiday_avg_ratio": 1.01,
+    "normal_avg_ratio": 0.996,
+    "holiday_effect_pct": 1.4
+  },
+  "easter_window": [
+    {
+      "date": "2026-03-30",
+      "clicks": 225,
+      "dev_pct": -4.0,
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-03-31",
+      "clicks": 269,
+      "dev_pct": 12.2,
+      "weekday": "Tue"
+    },
+    {
+      "date": "2026-04-01",
+      "clicks": 282,
+      "dev_pct": 15.8,
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-04-02",
+      "clicks": 282,
+      "dev_pct": 13.6,
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-04-03",
+      "clicks": 343,
+      "dev_pct": 33.9,
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-04-04",
+      "clicks": 311,
+      "dev_pct": 19.1,
+      "weekday": "Sat"
+    },
+    {
+      "date": "2026-04-05",
+      "clicks": 213,
+      "dev_pct": -19.7,
+      "weekday": "Sun"
+    },
+    {
+      "date": "2026-04-06",
+      "clicks": 236,
+      "dev_pct": -12.7,
+      "weekday": "Mon"
+    },
+    {
+      "date": "2026-04-07",
+      "clicks": 227,
+      "dev_pct": -16.6,
+      "weekday": "Tue"
+    },
+    {
+      "date": "2026-04-08",
+      "clicks": 231,
+      "dev_pct": -14.9,
+      "weekday": "Wed"
+    },
+    {
+      "date": "2026-04-09",
+      "clicks": 262,
+      "dev_pct": -3.8,
+      "weekday": "Thu"
+    },
+    {
+      "date": "2026-04-10",
+      "clicks": 322,
+      "dev_pct": 18.2,
+      "weekday": "Fri"
+    },
+    {
+      "date": "2026-04-11",
+      "clicks": 290,
+      "dev_pct": 7.7,
+      "weekday": "Sat"
+    },
+    {
+      "date": "2026-04-12",
+      "clicks": 267,
+      "dev_pct": -1.1,
+      "weekday": "Sun"
+    }
+  ],
+  "seasonal_themes": [
+    {
+      "event": "Ostern (5. Apr)",
+      "note": "Backen & Festtagsrezepte: 'veganer marillenkuchen', 'vegane hochzeitstorte', 'salzburger nockerl', 'veganes erdbeer tiramisu' - klassische Oster-/Fruehlingsbacknachfrage."
+    },
+    {
+      "event": "Muttertag (10. Mai)",
+      "note": "Torten & Desserts: 'vegane tortencreme', 'vegane hochzeitstorte rezept' - Anlass-Backen, ideal fuer terminierte Artikel."
+    },
+    {
+      "event": "Fruehling -> Sommer",
+      "note": "Eis & leichte Kueche steigen: 'ninja creami vegane rezepte', 'kaktus eis vegan', 'juice cleanse', 'vegane tapas' - Saisonshift Richtung kalte/leichte Gerichte."
+    },
+    {
+      "event": "Pfingsten/Feiertage",
+      "note": "Lange Wochenenden = Grill- & Ausflugskueche; Produkt-Checks ('haribo vegan','skittles vegan') laufen ganzjaehrig stabil."
+    }
+  ]
+}
